@@ -1,0 +1,184 @@
+{
+    "ac_kwargs":	{
+        "hidden_sizes":	[
+            400,
+            400
+        ]
+    },
+    "actor_critic":	"mlp_actor_critic",
+    "clip_ratio":	0.2,
+    "env":	{
+        "<auto_docking_vessel.Vessel object at 0x7f7ad03fe748>":	{
+            "C_a_dot":	-0.5,
+            "C_collision":	-2,
+            "C_collision_terminal":	-600,
+            "C_dock":	2.5,
+            "C_psi_tilde":	2.5,
+            "D":	{
+                "[[ 7.70702774e+01  0.00000000e+00  0.00000000e+00]\n [ 0.00000000e+00  2.54676364e+02 -2.03413865e+03]\n [ 0.00000000e+00 -6.72578102e+02  3.85003391e+05]]":	{
+                    "_getitem":	false
+                }
+            },
+            "M":	{
+                "[[   6767.7822         0.             0.      ]\n [      0.         11346.8706    -34032.68784 ]\n [      0.        -34032.68784  4454604.381096]]":	{
+                    "_getitem":	false
+                }
+            },
+            "a_max":	"[100.         100.          50.           1.57079633   1.57079633]",
+            "a_min":	"[-70.         -70.         -50.          -1.57079633  -1.57079633]",
+            "action_space":	{
+                "Box(5,)":	{
+                    "dtype":	"float64",
+                    "high":	"[100.         100.          50.           1.57079633   1.57079633]",
+                    "low":	"[-70.         -70.         -50.          -1.57079633  -1.57079633]",
+                    "np_random":	"RandomState(MT19937)",
+                    "shape":	[
+                        5
+                    ]
+                }
+            },
+            "alpha":	"[[-1.57079633]\n [-1.57079633]\n [ 1.57079633]]",
+            "alpha_dot":	"[[-0.]\n [-0.]\n [ 0.]]",
+            "alpha_dot_norm":	"[[-0.]\n [-0.]]",
+            "alpha_max":	"[[1.57079633]\n [1.57079633]\n [1.57079633]]",
+            "alpha_min":	"[[-1.57079633]\n [-1.57079633]\n [ 1.57079633]]",
+            "backward_psi":	true,
+            "collision_terminal":	true,
+            "current":	false,
+            "d_d":	166.19226295789113,
+            "d_d_dot":	0,
+            "d_dock":	9.525,
+            "d_edge":	20.342021520204185,
+            "d_obs":	50.093301987587026,
+            "decrease_sigma_dock":	false,
+            "distance_body":	true,
+            "docking_init_space_circle":	false,
+            "docking_init_space_func":	5,
+            "docking_terminal":	false,
+            "eta":	"[[726.05090727]\n [693.63780338]\n [ -2.60057607]]",
+            "eta_d":	"[700.         529.5          3.02523737]",
+            "eta_d_1":	"[ 7.00000000e+02  5.29500000e+02 -1.16355283e-01]",
+            "eta_d_2":	"[nan nan nan]",
+            "f":	"[[100]\n [100]\n [ 50]]",
+            "f_dot":	"[[0]\n [0]\n [0]]",
+            "f_dot_norm":	"[[0.]\n [0.]\n [0.]]",
+            "f_max":	"[[100]\n [100]\n [ 50]]",
+            "f_min":	"[[-70]\n [-70]\n [-50]]",
+            "h":	1.0,
+            "increase_init_area":	false,
+            "l_x":	"[-35 -35  35]",
+            "l_y":	"[ 7 -7  0]",
+            "limit_d_d_rewar_d_d":	8,
+            "limit_reward_psi_tilde":	0.5,
+            "map":	{
+                "<src_2.landMap_continous.LandMap object at 0x7f7b17d52c88>":	{
+                    "a":	"[-8.57798165  0.         -0.51948052 -2.77089783 -0.        ]",
+                    "a_init":	"[-8.57798165 -2.77089783 -0.         -0.        ]",
+                    "b":	"[5163.85321101 1242.         1503.81818182 2846.56346749  120.        ]",
+                    "b_init":	"[5463.85321101 2746.56346749  600.          300.        ]",
+                    "c":	"[-1. -1. -1. -1. -1.]",
+                    "c_init":	"[-1. -1. -1. -1.]",
+                    "d_max":	1342.0,
+                    "docking_init_space_x_b":	"[-400.  400.  400. -400.]",
+                    "docking_init_space_y_b":	"[-400. -400.  400.  400.]",
+                    "docking_space_x":	"[654.14334476 743.53479696 745.85665524 656.46520304]",
+                    "docking_space_x_b":	"[-45  45  45 -45]",
+                    "docking_space_y":	"[524.79179756 514.34343529 534.20820244 544.65656471]",
+                    "docking_space_y_b":	"[-10 -10  10  10]",
+                    "im":	"[[[0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]\n  ...\n  [0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]]\n\n [[0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]\n  ...\n  [0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]]\n\n [[0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]\n  ...\n  [0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]\n  [0.8666667  0.9529412  1.         1.        ]]\n\n ...\n\n [[0.8980392  0.8980392  0.8980392  1.        ]\n  [0.8980392  0.8980392  0.8980392  1.        ]\n  [0.8980392  0.8980392  0.8980392  1.        ]\n  ...\n  [0.9764706  0.9764706  0.9764706  1.        ]\n  [0.9739609  0.9739609  0.9739609  1.        ]\n  [0.96392167 0.96392167 0.96392167 1.        ]]\n\n [[0.8980393  0.8980393  0.8980393  1.        ]\n  [0.8980393  0.8980393  0.8980393  1.        ]\n  [0.8980393  0.8980393  0.8980393  1.        ]\n  ...\n  [0.97647065 0.97647065 0.97647065 1.        ]\n  [0.9719216  0.9719216  0.9719216  1.        ]\n  [0.9537255  0.9537255  0.9537255  1.        ]]\n\n [[0.8980392  0.8980392  0.8980392  1.        ]\n  [0.8980392  0.8980392  0.8980392  1.        ]\n  [0.8980392  0.8980392  0.8980392  1.        ]\n  ...\n  [0.9764706  0.9764706  0.9764706  1.        ]\n  [0.9694118  0.9694118  0.9694118  1.        ]\n  [0.9411765  0.9411765  0.9411765  1.        ]]]",
+                    "psi_doc":	-0.11635528346628864,
+                    "scale":	1.2,
+                    "sgn":	"[ 1 -1 -1 -1  1]",
+                    "sgn_init":	"[ 1 -1 -1  1]",
+                    "vessel_area":	1129.4745,
+                    "width_random_pos_at_sea":	500,
+                    "x_b":	"[-41.91   20.955  41.91   20.955 -41.91 ]",
+                    "x_doc":	700,
+                    "x_s":	"[ 120. 1242. 1242. 1194.  120.]",
+                    "y_b":	"[-7.7 -7.7  0.   7.7  7.7]",
+                    "y_doc":	529.5,
+                    "y_s":	"[588.  457.2 504.  596.4 984. ]"
+                }
+            },
+            "max_rad_init_circle":	60,
+            "n_episodes":	0,
+            "nu":	"[[-0.19904896]\n [ 0.        ]\n [ 0.        ]]",
+            "nu_r":	"[[-0.19904896]\n [ 0.        ]\n [ 0.        ]]",
+            "observation_space":	{
+                "Box(9,)":	{
+                    "dtype":	"float64",
+                    "high":	"[inf inf inf inf inf inf inf inf inf]",
+                    "low":	"[-inf -inf -inf -inf -inf -inf -inf -inf -inf]",
+                    "np_random":	"RandomState(MT19937)",
+                    "shape":	[
+                        9
+                    ]
+                }
+            },
+            "on_land":	false,
+            "psi_init_max":	0.7853981633974483,
+            "psi_init_min":	-0.7853981633974483,
+            "psi_tilde":	0.6573718627097316,
+            "psi_tilde_d":	0.8723789933641335,
+            "psi_tilde_obs":	-2.7533885255533526,
+            "reward_collision":	0,
+            "reward_dock":	2.643370946156818e-60,
+            "reward_func":	4,
+            "reward_psi_tilde":	0,
+            "reward_t":	"0",
+            "reward_u":	0,
+            "sigma_collision":	1,
+            "sigma_dock":	10,
+            "sigma_dock_max":	40,
+            "sigma_dock_min":	10,
+            "sigma_psi_tilde":	0.17453292519943295,
+            "sigma_psi_tilde_d":	0.17453292519943295,
+            "state_func":	1,
+            "t":	0,
+            "terminal":	0,
+            "tot_reward":	2.643370946156818e-60,
+            "u_init_max":	0.5,
+            "u_init_min":	0.0,
+            "x_max":	"[inf inf inf inf inf inf inf inf inf]",
+            "x_min":	"[-inf -inf -inf -inf -inf -inf -inf -inf -inf]",
+            "x_tilde":	106.86268717573279,
+            "y_tilde":	127.28014125010353
+        }
+    },
+    "epochs":	2000,
+    "exp_name":	"/home/elrorvik/master_auto_docking/comb_eta_docking/model_ppo/",
+    "gamma":	0.99,
+    "lam":	0.97,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7f7b04be4a90>":	{
+            "epoch_dict":	{},
+            "exp_name":	"/home/elrorvik/master_auto_docking/comb_eta_docking/model_ppo/",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"/home/elrorvik/master_auto_docking/comb_eta_docking/model_ppo/_sv28",
+            "output_file":	{
+                "<_io.TextIOWrapper name='/home/elrorvik/master_auto_docking/comb_eta_docking/model_ppo/_sv28/progress.txt' mode='w' encoding='UTF-8'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"/home/elrorvik/master_auto_docking/comb_eta_docking/model_ppo/",
+        "output_dir":	"/home/elrorvik/master_auto_docking/comb_eta_docking/model_ppo/_sv28"
+    },
+    "max_ep_len":	1200,
+    "normalize":	true,
+    "pi_lr":	0.0003,
+    "save_freq":	1,
+    "seed":	0,
+    "stats_path":	"/home/elrorvik/master_auto_docking/comb_eta_docking/model_ppo/_sv28/stats.txt",
+    "steps_per_epoch":	20000,
+    "target_kl":	0.01,
+    "train_pi_iters":	80,
+    "train_v_iters":	80,
+    "transfer_learning_path":	null,
+    "transfer_scope":	"main",
+    "vf_lr":	0.001
+}

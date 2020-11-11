@@ -1,0 +1,1 @@
+{"hid": 400, "l": 2, "gamma": 0.99, "seed": 0, "cpu": 1, "steps": 20000, "epochs": 2000, "save_freq": 1, "output_dir": "/home/elrorvik/master_auto_docking/micro_eta_docking/model_ppo/", "exp_name": "v21", "stats_path": "/home/elrorvik/master_auto_docking/micro_eta_docking/model_ppo/_sv21/stats.txt", "normalize": true, "max_ep_len": 1200}
